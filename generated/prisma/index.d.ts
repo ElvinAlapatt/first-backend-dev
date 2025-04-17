@@ -14,15 +14,15 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model user
+ * Model User
  * 
  */
-export type user = $Result.DefaultSelection<Prisma.$userPayload>
+export type User = $Result.DefaultSelection<Prisma.$UserPayload>
 /**
- * Model bookmark
+ * Model Bookmark
  * 
  */
-export type bookmark = $Result.DefaultSelection<Prisma.$bookmarkPayload>
+export type Bookmark = $Result.DefaultSelection<Prisma.$BookmarkPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -150,24 +150,24 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.user`: Exposes CRUD operations for the **user** model.
+   * `prisma.user`: Exposes CRUD operations for the **User** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Users
     * const users = await prisma.user.findMany()
     * ```
     */
-  get user(): Prisma.userDelegate<ExtArgs, ClientOptions>;
+  get user(): Prisma.UserDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.bookmark`: Exposes CRUD operations for the **bookmark** model.
+   * `prisma.bookmark`: Exposes CRUD operations for the **Bookmark** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Bookmarks
     * const bookmarks = await prisma.bookmark.findMany()
     * ```
     */
-  get bookmark(): Prisma.bookmarkDelegate<ExtArgs, ClientOptions>;
+  get bookmark(): Prisma.BookmarkDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -608,8 +608,8 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    user: 'user',
-    bookmark: 'bookmark'
+    User: 'User',
+    Bookmark: 'Bookmark'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -632,150 +632,150 @@ export namespace Prisma {
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      user: {
-        payload: Prisma.$userPayload<ExtArgs>
-        fields: Prisma.userFieldRefs
+      User: {
+        payload: Prisma.$UserPayload<ExtArgs>
+        fields: Prisma.UserFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.userFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload> | null
+            args: Prisma.UserFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.userFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload>
+            args: Prisma.UserFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           findFirst: {
-            args: Prisma.userFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload> | null
+            args: Prisma.UserFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.userFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload>
+            args: Prisma.UserFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           findMany: {
-            args: Prisma.userFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload>[]
+            args: Prisma.UserFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           create: {
-            args: Prisma.userCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload>
+            args: Prisma.UserCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           createMany: {
-            args: Prisma.userCreateManyArgs<ExtArgs>
+            args: Prisma.UserCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.userCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload>[]
+            args: Prisma.UserCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           delete: {
-            args: Prisma.userDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload>
+            args: Prisma.UserDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           update: {
-            args: Prisma.userUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload>
+            args: Prisma.UserUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           deleteMany: {
-            args: Prisma.userDeleteManyArgs<ExtArgs>
+            args: Prisma.UserDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.userUpdateManyArgs<ExtArgs>
+            args: Prisma.UserUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.userUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload>[]
+            args: Prisma.UserUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           upsert: {
-            args: Prisma.userUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$userPayload>
+            args: Prisma.UserUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$UserPayload>
           }
           aggregate: {
             args: Prisma.UserAggregateArgs<ExtArgs>
             result: $Utils.Optional<AggregateUser>
           }
           groupBy: {
-            args: Prisma.userGroupByArgs<ExtArgs>
+            args: Prisma.UserGroupByArgs<ExtArgs>
             result: $Utils.Optional<UserGroupByOutputType>[]
           }
           count: {
-            args: Prisma.userCountArgs<ExtArgs>
+            args: Prisma.UserCountArgs<ExtArgs>
             result: $Utils.Optional<UserCountAggregateOutputType> | number
           }
         }
       }
-      bookmark: {
-        payload: Prisma.$bookmarkPayload<ExtArgs>
-        fields: Prisma.bookmarkFieldRefs
+      Bookmark: {
+        payload: Prisma.$BookmarkPayload<ExtArgs>
+        fields: Prisma.BookmarkFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.bookmarkFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload> | null
+            args: Prisma.BookmarkFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.bookmarkFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload>
+            args: Prisma.BookmarkFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
           }
           findFirst: {
-            args: Prisma.bookmarkFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload> | null
+            args: Prisma.BookmarkFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.bookmarkFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload>
+            args: Prisma.BookmarkFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
           }
           findMany: {
-            args: Prisma.bookmarkFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload>[]
+            args: Prisma.BookmarkFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>[]
           }
           create: {
-            args: Prisma.bookmarkCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload>
+            args: Prisma.BookmarkCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
           }
           createMany: {
-            args: Prisma.bookmarkCreateManyArgs<ExtArgs>
+            args: Prisma.BookmarkCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.bookmarkCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload>[]
+            args: Prisma.BookmarkCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>[]
           }
           delete: {
-            args: Prisma.bookmarkDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload>
+            args: Prisma.BookmarkDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
           }
           update: {
-            args: Prisma.bookmarkUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload>
+            args: Prisma.BookmarkUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
           }
           deleteMany: {
-            args: Prisma.bookmarkDeleteManyArgs<ExtArgs>
+            args: Prisma.BookmarkDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.bookmarkUpdateManyArgs<ExtArgs>
+            args: Prisma.BookmarkUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.bookmarkUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload>[]
+            args: Prisma.BookmarkUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>[]
           }
           upsert: {
-            args: Prisma.bookmarkUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$bookmarkPayload>
+            args: Prisma.BookmarkUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$BookmarkPayload>
           }
           aggregate: {
             args: Prisma.BookmarkAggregateArgs<ExtArgs>
             result: $Utils.Optional<AggregateBookmark>
           }
           groupBy: {
-            args: Prisma.bookmarkGroupByArgs<ExtArgs>
+            args: Prisma.BookmarkGroupByArgs<ExtArgs>
             result: $Utils.Optional<BookmarkGroupByOutputType>[]
           }
           count: {
-            args: Prisma.bookmarkCountArgs<ExtArgs>
+            args: Prisma.BookmarkCountArgs<ExtArgs>
             result: $Utils.Optional<BookmarkCountAggregateOutputType> | number
           }
         }
@@ -864,8 +864,8 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    user?: userOmit
-    bookmark?: bookmarkOmit
+    user?: UserOmit
+    bookmark?: BookmarkOmit
   }
 
   /* Types for Logging */
@@ -961,7 +961,7 @@ export namespace Prisma {
    */
 
   /**
-   * Model user
+   * Model User
    */
 
   export type AggregateUser = {
@@ -1053,37 +1053,37 @@ export namespace Prisma {
 
   export type UserAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which user to aggregate.
+     * Filter which User to aggregate.
      */
-    where?: userWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of users to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: userOrderByWithRelationInput | userOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: userWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` users from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` users.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned users
+     * Count returned Users
     **/
     _count?: true | UserCountAggregateInputType
     /**
@@ -1123,11 +1123,11 @@ export namespace Prisma {
 
 
 
-  export type userGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: userWhereInput
-    orderBy?: userOrderByWithAggregationInput | userOrderByWithAggregationInput[]
+  export type UserGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: UserWhereInput
+    orderBy?: UserOrderByWithAggregationInput | UserOrderByWithAggregationInput[]
     by: UserScalarFieldEnum[] | UserScalarFieldEnum
-    having?: userScalarWhereWithAggregatesInput
+    having?: UserScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: UserCountAggregateInputType | true
@@ -1152,7 +1152,7 @@ export namespace Prisma {
     _max: UserMaxAggregateOutputType | null
   }
 
-  type GetUserGroupByPayload<T extends userGroupByArgs> = Prisma.PrismaPromise<
+  type GetUserGroupByPayload<T extends UserGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<UserGroupByOutputType, T['by']> &
         {
@@ -1166,7 +1166,7 @@ export namespace Prisma {
     >
 
 
-  export type userSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -1176,7 +1176,7 @@ export namespace Prisma {
     lastName?: boolean
   }, ExtArgs["result"]["user"]>
 
-  export type userSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -1186,7 +1186,7 @@ export namespace Prisma {
     lastName?: boolean
   }, ExtArgs["result"]["user"]>
 
-  export type userSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -1196,7 +1196,7 @@ export namespace Prisma {
     lastName?: boolean
   }, ExtArgs["result"]["user"]>
 
-  export type userSelectScalar = {
+  export type UserSelectScalar = {
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -1206,10 +1206,10 @@ export namespace Prisma {
     lastName?: boolean
   }
 
-  export type userOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "email" | "hash" | "firstName" | "lastName", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "email" | "hash" | "firstName" | "lastName", ExtArgs["result"]["user"]>
 
-  export type $userPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "user"
+  export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "User"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -1223,18 +1223,18 @@ export namespace Prisma {
     composites: {}
   }
 
-  type userGetPayload<S extends boolean | null | undefined | userDefaultArgs> = $Result.GetResult<Prisma.$userPayload, S>
+  type UserGetPayload<S extends boolean | null | undefined | UserDefaultArgs> = $Result.GetResult<Prisma.$UserPayload, S>
 
-  type userCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<userFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+  type UserCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<UserFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
       select?: UserCountAggregateInputType | true
     }
 
-  export interface userDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['user'], meta: { name: 'user' } }
+  export interface UserDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['User'], meta: { name: 'User' } }
     /**
      * Find zero or one User that matches the filter.
-     * @param {userFindUniqueArgs} args - Arguments to find a User
+     * @param {UserFindUniqueArgs} args - Arguments to find a User
      * @example
      * // Get one User
      * const user = await prisma.user.findUnique({
@@ -1243,12 +1243,12 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUnique<T extends userFindUniqueArgs>(args: SelectSubset<T, userFindUniqueArgs<ExtArgs>>): Prisma__userClient<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends UserFindUniqueArgs>(args: SelectSubset<T, UserFindUniqueArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find one User that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {userFindUniqueOrThrowArgs} args - Arguments to find a User
+     * @param {UserFindUniqueOrThrowArgs} args - Arguments to find a User
      * @example
      * // Get one User
      * const user = await prisma.user.findUniqueOrThrow({
@@ -1257,13 +1257,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUniqueOrThrow<T extends userFindUniqueOrThrowArgs>(args: SelectSubset<T, userFindUniqueOrThrowArgs<ExtArgs>>): Prisma__userClient<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends UserFindUniqueOrThrowArgs>(args: SelectSubset<T, UserFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first User that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {userFindFirstArgs} args - Arguments to find a User
+     * @param {UserFindFirstArgs} args - Arguments to find a User
      * @example
      * // Get one User
      * const user = await prisma.user.findFirst({
@@ -1272,14 +1272,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirst<T extends userFindFirstArgs>(args?: SelectSubset<T, userFindFirstArgs<ExtArgs>>): Prisma__userClient<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends UserFindFirstArgs>(args?: SelectSubset<T, UserFindFirstArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first User that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {userFindFirstOrThrowArgs} args - Arguments to find a User
+     * @param {UserFindFirstOrThrowArgs} args - Arguments to find a User
      * @example
      * // Get one User
      * const user = await prisma.user.findFirstOrThrow({
@@ -1288,13 +1288,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirstOrThrow<T extends userFindFirstOrThrowArgs>(args?: SelectSubset<T, userFindFirstOrThrowArgs<ExtArgs>>): Prisma__userClient<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends UserFindFirstOrThrowArgs>(args?: SelectSubset<T, UserFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Users that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {userFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {UserFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Users
      * const users = await prisma.user.findMany()
@@ -1306,11 +1306,11 @@ export namespace Prisma {
      * const userWithIdOnly = await prisma.user.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends userFindManyArgs>(args?: SelectSubset<T, userFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends UserFindManyArgs>(args?: SelectSubset<T, UserFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
      * Create a User.
-     * @param {userCreateArgs} args - Arguments to create a User.
+     * @param {UserCreateArgs} args - Arguments to create a User.
      * @example
      * // Create one User
      * const User = await prisma.user.create({
@@ -1320,11 +1320,11 @@ export namespace Prisma {
      * })
      * 
      */
-    create<T extends userCreateArgs>(args: SelectSubset<T, userCreateArgs<ExtArgs>>): Prisma__userClient<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends UserCreateArgs>(args: SelectSubset<T, UserCreateArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Users.
-     * @param {userCreateManyArgs} args - Arguments to create many Users.
+     * @param {UserCreateManyArgs} args - Arguments to create many Users.
      * @example
      * // Create many Users
      * const user = await prisma.user.createMany({
@@ -1334,11 +1334,11 @@ export namespace Prisma {
      * })
      *     
      */
-    createMany<T extends userCreateManyArgs>(args?: SelectSubset<T, userCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends UserCreateManyArgs>(args?: SelectSubset<T, UserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Users and returns the data saved in the database.
-     * @param {userCreateManyAndReturnArgs} args - Arguments to create many Users.
+     * @param {UserCreateManyAndReturnArgs} args - Arguments to create many Users.
      * @example
      * // Create many Users
      * const user = await prisma.user.createManyAndReturn({
@@ -1358,11 +1358,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends userCreateManyAndReturnArgs>(args?: SelectSubset<T, userCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends UserCreateManyAndReturnArgs>(args?: SelectSubset<T, UserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Delete a User.
-     * @param {userDeleteArgs} args - Arguments to delete one User.
+     * @param {UserDeleteArgs} args - Arguments to delete one User.
      * @example
      * // Delete one User
      * const User = await prisma.user.delete({
@@ -1372,11 +1372,11 @@ export namespace Prisma {
      * })
      * 
      */
-    delete<T extends userDeleteArgs>(args: SelectSubset<T, userDeleteArgs<ExtArgs>>): Prisma__userClient<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends UserDeleteArgs>(args: SelectSubset<T, UserDeleteArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Update one User.
-     * @param {userUpdateArgs} args - Arguments to update one User.
+     * @param {UserUpdateArgs} args - Arguments to update one User.
      * @example
      * // Update one User
      * const user = await prisma.user.update({
@@ -1389,11 +1389,11 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends userUpdateArgs>(args: SelectSubset<T, userUpdateArgs<ExtArgs>>): Prisma__userClient<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends UserUpdateArgs>(args: SelectSubset<T, UserUpdateArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Users.
-     * @param {userDeleteManyArgs} args - Arguments to filter Users to delete.
+     * @param {UserDeleteManyArgs} args - Arguments to filter Users to delete.
      * @example
      * // Delete a few Users
      * const { count } = await prisma.user.deleteMany({
@@ -1403,13 +1403,13 @@ export namespace Prisma {
      * })
      * 
      */
-    deleteMany<T extends userDeleteManyArgs>(args?: SelectSubset<T, userDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends UserDeleteManyArgs>(args?: SelectSubset<T, UserDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Users.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {userUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {UserUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Users
      * const user = await prisma.user.updateMany({
@@ -1422,11 +1422,11 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends userUpdateManyArgs>(args: SelectSubset<T, userUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends UserUpdateManyArgs>(args: SelectSubset<T, UserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Users and returns the data updated in the database.
-     * @param {userUpdateManyAndReturnArgs} args - Arguments to update many Users.
+     * @param {UserUpdateManyAndReturnArgs} args - Arguments to update many Users.
      * @example
      * // Update many Users
      * const user = await prisma.user.updateManyAndReturn({
@@ -1452,11 +1452,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends userUpdateManyAndReturnArgs>(args: SelectSubset<T, userUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends UserUpdateManyAndReturnArgs>(args: SelectSubset<T, UserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one User.
-     * @param {userUpsertArgs} args - Arguments to update or create a User.
+     * @param {UserUpsertArgs} args - Arguments to update or create a User.
      * @example
      * // Update or create a User
      * const user = await prisma.user.upsert({
@@ -1471,14 +1471,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    upsert<T extends userUpsertArgs>(args: SelectSubset<T, userUpsertArgs<ExtArgs>>): Prisma__userClient<$Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends UserUpsertArgs>(args: SelectSubset<T, UserUpsertArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Users.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {userCountArgs} args - Arguments to filter Users to count.
+     * @param {UserCountArgs} args - Arguments to filter Users to count.
      * @example
      * // Count the number of Users
      * const count = await prisma.user.count({
@@ -1487,8 +1487,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends userCountArgs>(
-      args?: Subset<T, userCountArgs>,
+    count<T extends UserCountArgs>(
+      args?: Subset<T, UserCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -1527,7 +1527,7 @@ export namespace Prisma {
      * Group by User.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {userGroupByArgs} args - Group by arguments.
+     * @param {UserGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1542,14 +1542,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends userGroupByArgs,
+      T extends UserGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: userGroupByArgs['orderBy'] }
-        : { orderBy?: userGroupByArgs['orderBy'] },
+        ? { orderBy: UserGroupByArgs['orderBy'] }
+        : { orderBy?: UserGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1598,20 +1598,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, userGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, UserGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the user model
+   * Fields of the User model
    */
-  readonly fields: userFieldRefs;
+  readonly fields: UserFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for user.
+   * The delegate class that acts as a "Promise-like" for User.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__userClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1639,384 +1639,384 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the user model
+   * Fields of the User model
    */
-  interface userFieldRefs {
-    readonly id: FieldRef<"user", 'Int'>
-    readonly createdAt: FieldRef<"user", 'DateTime'>
-    readonly updatedAt: FieldRef<"user", 'DateTime'>
-    readonly email: FieldRef<"user", 'String'>
-    readonly hash: FieldRef<"user", 'String'>
-    readonly firstName: FieldRef<"user", 'String'>
-    readonly lastName: FieldRef<"user", 'String'>
+  interface UserFieldRefs {
+    readonly id: FieldRef<"User", 'Int'>
+    readonly createdAt: FieldRef<"User", 'DateTime'>
+    readonly updatedAt: FieldRef<"User", 'DateTime'>
+    readonly email: FieldRef<"User", 'String'>
+    readonly hash: FieldRef<"User", 'String'>
+    readonly firstName: FieldRef<"User", 'String'>
+    readonly lastName: FieldRef<"User", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * user findUnique
+   * User findUnique
    */
-  export type userFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which user to fetch.
+     * Filter, which User to fetch.
      */
-    where: userWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * user findUniqueOrThrow
+   * User findUniqueOrThrow
    */
-  export type userFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which user to fetch.
+     * Filter, which User to fetch.
      */
-    where: userWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * user findFirst
+   * User findFirst
    */
-  export type userFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which user to fetch.
+     * Filter, which User to fetch.
      */
-    where?: userWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of users to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: userOrderByWithRelationInput | userOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for users.
+     * Sets the position for searching for Users.
      */
-    cursor?: userWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` users from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` users.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of users.
+     * Filter by unique combinations of Users.
      */
     distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
   }
 
   /**
-   * user findFirstOrThrow
+   * User findFirstOrThrow
    */
-  export type userFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which user to fetch.
+     * Filter, which User to fetch.
      */
-    where?: userWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of users to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: userOrderByWithRelationInput | userOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for users.
+     * Sets the position for searching for Users.
      */
-    cursor?: userWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` users from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` users.
+     * Skip the first `n` Users.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of users.
+     * Filter by unique combinations of Users.
      */
     distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
   }
 
   /**
-   * user findMany
+   * User findMany
    */
-  export type userFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter, which users to fetch.
+     * Filter, which Users to fetch.
      */
-    where?: userWhereInput
+    where?: UserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of users to fetch.
+     * Determine the order of Users to fetch.
      */
-    orderBy?: userOrderByWithRelationInput | userOrderByWithRelationInput[]
+    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing users.
+     * Sets the position for listing Users.
      */
-    cursor?: userWhereUniqueInput
+    cursor?: UserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` users from the position of the cursor.
+     * Take `±n` Users from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` users.
+     * Skip the first `n` Users.
      */
     skip?: number
     distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
   }
 
   /**
-   * user create
+   * User create
    */
-  export type userCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data needed to create a user.
+     * The data needed to create a User.
      */
-    data: XOR<userCreateInput, userUncheckedCreateInput>
+    data: XOR<UserCreateInput, UserUncheckedCreateInput>
   }
 
   /**
-   * user createMany
+   * User createMany
    */
-  export type userCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many users.
+     * The data used to create many Users.
      */
-    data: userCreateManyInput | userCreateManyInput[]
+    data: UserCreateManyInput | UserCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * user createManyAndReturn
+   * User createManyAndReturn
    */
-  export type userCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelectCreateManyAndReturn<ExtArgs> | null
+    select?: UserSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data used to create many users.
+     * The data used to create many Users.
      */
-    data: userCreateManyInput | userCreateManyInput[]
+    data: UserCreateManyInput | UserCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * user update
+   * User update
    */
-  export type userUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data needed to update a user.
+     * The data needed to update a User.
      */
-    data: XOR<userUpdateInput, userUncheckedUpdateInput>
+    data: XOR<UserUpdateInput, UserUncheckedUpdateInput>
     /**
-     * Choose, which user to update.
+     * Choose, which User to update.
      */
-    where: userWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * user updateMany
+   * User updateMany
    */
-  export type userUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update users.
+     * The data used to update Users.
      */
-    data: XOR<userUpdateManyMutationInput, userUncheckedUpdateManyInput>
+    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
     /**
-     * Filter which users to update
+     * Filter which Users to update
      */
-    where?: userWhereInput
+    where?: UserWhereInput
     /**
-     * Limit how many users to update.
+     * Limit how many Users to update.
      */
     limit?: number
   }
 
   /**
-   * user updateManyAndReturn
+   * User updateManyAndReturn
    */
-  export type userUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: UserSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The data used to update users.
+     * The data used to update Users.
      */
-    data: XOR<userUpdateManyMutationInput, userUncheckedUpdateManyInput>
+    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
     /**
-     * Filter which users to update
+     * Filter which Users to update
      */
-    where?: userWhereInput
+    where?: UserWhereInput
     /**
-     * Limit how many users to update.
+     * Limit how many Users to update.
      */
     limit?: number
   }
 
   /**
-   * user upsert
+   * User upsert
    */
-  export type userUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * The filter to search for the user to update in case it exists.
+     * The filter to search for the User to update in case it exists.
      */
-    where: userWhereUniqueInput
+    where: UserWhereUniqueInput
     /**
-     * In case the user found by the `where` argument doesn't exist, create a new user with this data.
+     * In case the User found by the `where` argument doesn't exist, create a new User with this data.
      */
-    create: XOR<userCreateInput, userUncheckedCreateInput>
+    create: XOR<UserCreateInput, UserUncheckedCreateInput>
     /**
-     * In case the user was found with the provided `where` argument, update it with this data.
+     * In case the User was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<userUpdateInput, userUncheckedUpdateInput>
+    update: XOR<UserUpdateInput, UserUncheckedUpdateInput>
   }
 
   /**
-   * user delete
+   * User delete
    */
-  export type userDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
     /**
-     * Filter which user to delete.
+     * Filter which User to delete.
      */
-    where: userWhereUniqueInput
+    where: UserWhereUniqueInput
   }
 
   /**
-   * user deleteMany
+   * User deleteMany
    */
-  export type userDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which users to delete
+     * Filter which Users to delete
      */
-    where?: userWhereInput
+    where?: UserWhereInput
     /**
-     * Limit how many users to delete.
+     * Limit how many Users to delete.
      */
     limit?: number
   }
 
   /**
-   * user without action
+   * User without action
    */
-  export type userDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type UserDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the user
+     * Select specific fields to fetch from the User
      */
-    select?: userSelect<ExtArgs> | null
+    select?: UserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the user
+     * Omit specific fields from the User
      */
-    omit?: userOmit<ExtArgs> | null
+    omit?: UserOmit<ExtArgs> | null
   }
 
 
   /**
-   * Model bookmark
+   * Model Bookmark
    */
 
   export type AggregateBookmark = {
@@ -2102,37 +2102,37 @@ export namespace Prisma {
 
   export type BookmarkAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which bookmark to aggregate.
+     * Filter which Bookmark to aggregate.
      */
-    where?: bookmarkWhereInput
+    where?: BookmarkWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of bookmarks to fetch.
+     * Determine the order of Bookmarks to fetch.
      */
-    orderBy?: bookmarkOrderByWithRelationInput | bookmarkOrderByWithRelationInput[]
+    orderBy?: BookmarkOrderByWithRelationInput | BookmarkOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: bookmarkWhereUniqueInput
+    cursor?: BookmarkWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` bookmarks from the position of the cursor.
+     * Take `±n` Bookmarks from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` bookmarks.
+     * Skip the first `n` Bookmarks.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned bookmarks
+     * Count returned Bookmarks
     **/
     _count?: true | BookmarkCountAggregateInputType
     /**
@@ -2172,11 +2172,11 @@ export namespace Prisma {
 
 
 
-  export type bookmarkGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: bookmarkWhereInput
-    orderBy?: bookmarkOrderByWithAggregationInput | bookmarkOrderByWithAggregationInput[]
+  export type BookmarkGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: BookmarkWhereInput
+    orderBy?: BookmarkOrderByWithAggregationInput | BookmarkOrderByWithAggregationInput[]
     by: BookmarkScalarFieldEnum[] | BookmarkScalarFieldEnum
-    having?: bookmarkScalarWhereWithAggregatesInput
+    having?: BookmarkScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: BookmarkCountAggregateInputType | true
@@ -2200,7 +2200,7 @@ export namespace Prisma {
     _max: BookmarkMaxAggregateOutputType | null
   }
 
-  type GetBookmarkGroupByPayload<T extends bookmarkGroupByArgs> = Prisma.PrismaPromise<
+  type GetBookmarkGroupByPayload<T extends BookmarkGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<BookmarkGroupByOutputType, T['by']> &
         {
@@ -2214,7 +2214,7 @@ export namespace Prisma {
     >
 
 
-  export type bookmarkSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type BookmarkSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -2223,7 +2223,7 @@ export namespace Prisma {
     link?: boolean
   }, ExtArgs["result"]["bookmark"]>
 
-  export type bookmarkSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type BookmarkSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -2232,7 +2232,7 @@ export namespace Prisma {
     link?: boolean
   }, ExtArgs["result"]["bookmark"]>
 
-  export type bookmarkSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type BookmarkSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -2241,7 +2241,7 @@ export namespace Prisma {
     link?: boolean
   }, ExtArgs["result"]["bookmark"]>
 
-  export type bookmarkSelectScalar = {
+  export type BookmarkSelectScalar = {
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -2250,10 +2250,10 @@ export namespace Prisma {
     link?: boolean
   }
 
-  export type bookmarkOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "title" | "description" | "link", ExtArgs["result"]["bookmark"]>
+  export type BookmarkOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "title" | "description" | "link", ExtArgs["result"]["bookmark"]>
 
-  export type $bookmarkPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "bookmark"
+  export type $BookmarkPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Bookmark"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -2266,18 +2266,18 @@ export namespace Prisma {
     composites: {}
   }
 
-  type bookmarkGetPayload<S extends boolean | null | undefined | bookmarkDefaultArgs> = $Result.GetResult<Prisma.$bookmarkPayload, S>
+  type BookmarkGetPayload<S extends boolean | null | undefined | BookmarkDefaultArgs> = $Result.GetResult<Prisma.$BookmarkPayload, S>
 
-  type bookmarkCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<bookmarkFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+  type BookmarkCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<BookmarkFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
       select?: BookmarkCountAggregateInputType | true
     }
 
-  export interface bookmarkDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['bookmark'], meta: { name: 'bookmark' } }
+  export interface BookmarkDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Bookmark'], meta: { name: 'Bookmark' } }
     /**
      * Find zero or one Bookmark that matches the filter.
-     * @param {bookmarkFindUniqueArgs} args - Arguments to find a Bookmark
+     * @param {BookmarkFindUniqueArgs} args - Arguments to find a Bookmark
      * @example
      * // Get one Bookmark
      * const bookmark = await prisma.bookmark.findUnique({
@@ -2286,12 +2286,12 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUnique<T extends bookmarkFindUniqueArgs>(args: SelectSubset<T, bookmarkFindUniqueArgs<ExtArgs>>): Prisma__bookmarkClient<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends BookmarkFindUniqueArgs>(args: SelectSubset<T, BookmarkFindUniqueArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find one Bookmark that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {bookmarkFindUniqueOrThrowArgs} args - Arguments to find a Bookmark
+     * @param {BookmarkFindUniqueOrThrowArgs} args - Arguments to find a Bookmark
      * @example
      * // Get one Bookmark
      * const bookmark = await prisma.bookmark.findUniqueOrThrow({
@@ -2300,13 +2300,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUniqueOrThrow<T extends bookmarkFindUniqueOrThrowArgs>(args: SelectSubset<T, bookmarkFindUniqueOrThrowArgs<ExtArgs>>): Prisma__bookmarkClient<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends BookmarkFindUniqueOrThrowArgs>(args: SelectSubset<T, BookmarkFindUniqueOrThrowArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Bookmark that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {bookmarkFindFirstArgs} args - Arguments to find a Bookmark
+     * @param {BookmarkFindFirstArgs} args - Arguments to find a Bookmark
      * @example
      * // Get one Bookmark
      * const bookmark = await prisma.bookmark.findFirst({
@@ -2315,14 +2315,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirst<T extends bookmarkFindFirstArgs>(args?: SelectSubset<T, bookmarkFindFirstArgs<ExtArgs>>): Prisma__bookmarkClient<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends BookmarkFindFirstArgs>(args?: SelectSubset<T, BookmarkFindFirstArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Bookmark that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {bookmarkFindFirstOrThrowArgs} args - Arguments to find a Bookmark
+     * @param {BookmarkFindFirstOrThrowArgs} args - Arguments to find a Bookmark
      * @example
      * // Get one Bookmark
      * const bookmark = await prisma.bookmark.findFirstOrThrow({
@@ -2331,13 +2331,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirstOrThrow<T extends bookmarkFindFirstOrThrowArgs>(args?: SelectSubset<T, bookmarkFindFirstOrThrowArgs<ExtArgs>>): Prisma__bookmarkClient<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends BookmarkFindFirstOrThrowArgs>(args?: SelectSubset<T, BookmarkFindFirstOrThrowArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Bookmarks that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {bookmarkFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {BookmarkFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Bookmarks
      * const bookmarks = await prisma.bookmark.findMany()
@@ -2349,11 +2349,11 @@ export namespace Prisma {
      * const bookmarkWithIdOnly = await prisma.bookmark.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends bookmarkFindManyArgs>(args?: SelectSubset<T, bookmarkFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends BookmarkFindManyArgs>(args?: SelectSubset<T, BookmarkFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
      * Create a Bookmark.
-     * @param {bookmarkCreateArgs} args - Arguments to create a Bookmark.
+     * @param {BookmarkCreateArgs} args - Arguments to create a Bookmark.
      * @example
      * // Create one Bookmark
      * const Bookmark = await prisma.bookmark.create({
@@ -2363,11 +2363,11 @@ export namespace Prisma {
      * })
      * 
      */
-    create<T extends bookmarkCreateArgs>(args: SelectSubset<T, bookmarkCreateArgs<ExtArgs>>): Prisma__bookmarkClient<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends BookmarkCreateArgs>(args: SelectSubset<T, BookmarkCreateArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Bookmarks.
-     * @param {bookmarkCreateManyArgs} args - Arguments to create many Bookmarks.
+     * @param {BookmarkCreateManyArgs} args - Arguments to create many Bookmarks.
      * @example
      * // Create many Bookmarks
      * const bookmark = await prisma.bookmark.createMany({
@@ -2377,11 +2377,11 @@ export namespace Prisma {
      * })
      *     
      */
-    createMany<T extends bookmarkCreateManyArgs>(args?: SelectSubset<T, bookmarkCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends BookmarkCreateManyArgs>(args?: SelectSubset<T, BookmarkCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Bookmarks and returns the data saved in the database.
-     * @param {bookmarkCreateManyAndReturnArgs} args - Arguments to create many Bookmarks.
+     * @param {BookmarkCreateManyAndReturnArgs} args - Arguments to create many Bookmarks.
      * @example
      * // Create many Bookmarks
      * const bookmark = await prisma.bookmark.createManyAndReturn({
@@ -2401,11 +2401,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends bookmarkCreateManyAndReturnArgs>(args?: SelectSubset<T, bookmarkCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends BookmarkCreateManyAndReturnArgs>(args?: SelectSubset<T, BookmarkCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Delete a Bookmark.
-     * @param {bookmarkDeleteArgs} args - Arguments to delete one Bookmark.
+     * @param {BookmarkDeleteArgs} args - Arguments to delete one Bookmark.
      * @example
      * // Delete one Bookmark
      * const Bookmark = await prisma.bookmark.delete({
@@ -2415,11 +2415,11 @@ export namespace Prisma {
      * })
      * 
      */
-    delete<T extends bookmarkDeleteArgs>(args: SelectSubset<T, bookmarkDeleteArgs<ExtArgs>>): Prisma__bookmarkClient<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends BookmarkDeleteArgs>(args: SelectSubset<T, BookmarkDeleteArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Update one Bookmark.
-     * @param {bookmarkUpdateArgs} args - Arguments to update one Bookmark.
+     * @param {BookmarkUpdateArgs} args - Arguments to update one Bookmark.
      * @example
      * // Update one Bookmark
      * const bookmark = await prisma.bookmark.update({
@@ -2432,11 +2432,11 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends bookmarkUpdateArgs>(args: SelectSubset<T, bookmarkUpdateArgs<ExtArgs>>): Prisma__bookmarkClient<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends BookmarkUpdateArgs>(args: SelectSubset<T, BookmarkUpdateArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Bookmarks.
-     * @param {bookmarkDeleteManyArgs} args - Arguments to filter Bookmarks to delete.
+     * @param {BookmarkDeleteManyArgs} args - Arguments to filter Bookmarks to delete.
      * @example
      * // Delete a few Bookmarks
      * const { count } = await prisma.bookmark.deleteMany({
@@ -2446,13 +2446,13 @@ export namespace Prisma {
      * })
      * 
      */
-    deleteMany<T extends bookmarkDeleteManyArgs>(args?: SelectSubset<T, bookmarkDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends BookmarkDeleteManyArgs>(args?: SelectSubset<T, BookmarkDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Bookmarks.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {bookmarkUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {BookmarkUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Bookmarks
      * const bookmark = await prisma.bookmark.updateMany({
@@ -2465,11 +2465,11 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends bookmarkUpdateManyArgs>(args: SelectSubset<T, bookmarkUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends BookmarkUpdateManyArgs>(args: SelectSubset<T, BookmarkUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Bookmarks and returns the data updated in the database.
-     * @param {bookmarkUpdateManyAndReturnArgs} args - Arguments to update many Bookmarks.
+     * @param {BookmarkUpdateManyAndReturnArgs} args - Arguments to update many Bookmarks.
      * @example
      * // Update many Bookmarks
      * const bookmark = await prisma.bookmark.updateManyAndReturn({
@@ -2495,11 +2495,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends bookmarkUpdateManyAndReturnArgs>(args: SelectSubset<T, bookmarkUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends BookmarkUpdateManyAndReturnArgs>(args: SelectSubset<T, BookmarkUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Bookmark.
-     * @param {bookmarkUpsertArgs} args - Arguments to update or create a Bookmark.
+     * @param {BookmarkUpsertArgs} args - Arguments to update or create a Bookmark.
      * @example
      * // Update or create a Bookmark
      * const bookmark = await prisma.bookmark.upsert({
@@ -2514,14 +2514,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    upsert<T extends bookmarkUpsertArgs>(args: SelectSubset<T, bookmarkUpsertArgs<ExtArgs>>): Prisma__bookmarkClient<$Result.GetResult<Prisma.$bookmarkPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends BookmarkUpsertArgs>(args: SelectSubset<T, BookmarkUpsertArgs<ExtArgs>>): Prisma__BookmarkClient<$Result.GetResult<Prisma.$BookmarkPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Bookmarks.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {bookmarkCountArgs} args - Arguments to filter Bookmarks to count.
+     * @param {BookmarkCountArgs} args - Arguments to filter Bookmarks to count.
      * @example
      * // Count the number of Bookmarks
      * const count = await prisma.bookmark.count({
@@ -2530,8 +2530,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends bookmarkCountArgs>(
-      args?: Subset<T, bookmarkCountArgs>,
+    count<T extends BookmarkCountArgs>(
+      args?: Subset<T, BookmarkCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -2570,7 +2570,7 @@ export namespace Prisma {
      * Group by Bookmark.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {bookmarkGroupByArgs} args - Group by arguments.
+     * @param {BookmarkGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2585,14 +2585,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends bookmarkGroupByArgs,
+      T extends BookmarkGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: bookmarkGroupByArgs['orderBy'] }
-        : { orderBy?: bookmarkGroupByArgs['orderBy'] },
+        ? { orderBy: BookmarkGroupByArgs['orderBy'] }
+        : { orderBy?: BookmarkGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2641,20 +2641,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, bookmarkGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetBookmarkGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, BookmarkGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetBookmarkGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the bookmark model
+   * Fields of the Bookmark model
    */
-  readonly fields: bookmarkFieldRefs;
+  readonly fields: BookmarkFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for bookmark.
+   * The delegate class that acts as a "Promise-like" for Bookmark.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__bookmarkClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__BookmarkClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -2682,378 +2682,378 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the bookmark model
+   * Fields of the Bookmark model
    */
-  interface bookmarkFieldRefs {
-    readonly id: FieldRef<"bookmark", 'Int'>
-    readonly createdAt: FieldRef<"bookmark", 'DateTime'>
-    readonly updatedAt: FieldRef<"bookmark", 'DateTime'>
-    readonly title: FieldRef<"bookmark", 'String'>
-    readonly description: FieldRef<"bookmark", 'String'>
-    readonly link: FieldRef<"bookmark", 'String'>
+  interface BookmarkFieldRefs {
+    readonly id: FieldRef<"Bookmark", 'Int'>
+    readonly createdAt: FieldRef<"Bookmark", 'DateTime'>
+    readonly updatedAt: FieldRef<"Bookmark", 'DateTime'>
+    readonly title: FieldRef<"Bookmark", 'String'>
+    readonly description: FieldRef<"Bookmark", 'String'>
+    readonly link: FieldRef<"Bookmark", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * bookmark findUnique
+   * Bookmark findUnique
    */
-  export type bookmarkFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelect<ExtArgs> | null
+    select?: BookmarkSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * Filter, which bookmark to fetch.
+     * Filter, which Bookmark to fetch.
      */
-    where: bookmarkWhereUniqueInput
+    where: BookmarkWhereUniqueInput
   }
 
   /**
-   * bookmark findUniqueOrThrow
+   * Bookmark findUniqueOrThrow
    */
-  export type bookmarkFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelect<ExtArgs> | null
+    select?: BookmarkSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * Filter, which bookmark to fetch.
+     * Filter, which Bookmark to fetch.
      */
-    where: bookmarkWhereUniqueInput
+    where: BookmarkWhereUniqueInput
   }
 
   /**
-   * bookmark findFirst
+   * Bookmark findFirst
    */
-  export type bookmarkFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelect<ExtArgs> | null
+    select?: BookmarkSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * Filter, which bookmark to fetch.
+     * Filter, which Bookmark to fetch.
      */
-    where?: bookmarkWhereInput
+    where?: BookmarkWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of bookmarks to fetch.
+     * Determine the order of Bookmarks to fetch.
      */
-    orderBy?: bookmarkOrderByWithRelationInput | bookmarkOrderByWithRelationInput[]
+    orderBy?: BookmarkOrderByWithRelationInput | BookmarkOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for bookmarks.
+     * Sets the position for searching for Bookmarks.
      */
-    cursor?: bookmarkWhereUniqueInput
+    cursor?: BookmarkWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` bookmarks from the position of the cursor.
+     * Take `±n` Bookmarks from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` bookmarks.
+     * Skip the first `n` Bookmarks.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of bookmarks.
+     * Filter by unique combinations of Bookmarks.
      */
     distinct?: BookmarkScalarFieldEnum | BookmarkScalarFieldEnum[]
   }
 
   /**
-   * bookmark findFirstOrThrow
+   * Bookmark findFirstOrThrow
    */
-  export type bookmarkFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelect<ExtArgs> | null
+    select?: BookmarkSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * Filter, which bookmark to fetch.
+     * Filter, which Bookmark to fetch.
      */
-    where?: bookmarkWhereInput
+    where?: BookmarkWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of bookmarks to fetch.
+     * Determine the order of Bookmarks to fetch.
      */
-    orderBy?: bookmarkOrderByWithRelationInput | bookmarkOrderByWithRelationInput[]
+    orderBy?: BookmarkOrderByWithRelationInput | BookmarkOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for bookmarks.
+     * Sets the position for searching for Bookmarks.
      */
-    cursor?: bookmarkWhereUniqueInput
+    cursor?: BookmarkWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` bookmarks from the position of the cursor.
+     * Take `±n` Bookmarks from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` bookmarks.
+     * Skip the first `n` Bookmarks.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of bookmarks.
+     * Filter by unique combinations of Bookmarks.
      */
     distinct?: BookmarkScalarFieldEnum | BookmarkScalarFieldEnum[]
   }
 
   /**
-   * bookmark findMany
+   * Bookmark findMany
    */
-  export type bookmarkFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelect<ExtArgs> | null
+    select?: BookmarkSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * Filter, which bookmarks to fetch.
+     * Filter, which Bookmarks to fetch.
      */
-    where?: bookmarkWhereInput
+    where?: BookmarkWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of bookmarks to fetch.
+     * Determine the order of Bookmarks to fetch.
      */
-    orderBy?: bookmarkOrderByWithRelationInput | bookmarkOrderByWithRelationInput[]
+    orderBy?: BookmarkOrderByWithRelationInput | BookmarkOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing bookmarks.
+     * Sets the position for listing Bookmarks.
      */
-    cursor?: bookmarkWhereUniqueInput
+    cursor?: BookmarkWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` bookmarks from the position of the cursor.
+     * Take `±n` Bookmarks from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` bookmarks.
+     * Skip the first `n` Bookmarks.
      */
     skip?: number
     distinct?: BookmarkScalarFieldEnum | BookmarkScalarFieldEnum[]
   }
 
   /**
-   * bookmark create
+   * Bookmark create
    */
-  export type bookmarkCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelect<ExtArgs> | null
+    select?: BookmarkSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * The data needed to create a bookmark.
+     * The data needed to create a Bookmark.
      */
-    data: XOR<bookmarkCreateInput, bookmarkUncheckedCreateInput>
+    data: XOR<BookmarkCreateInput, BookmarkUncheckedCreateInput>
   }
 
   /**
-   * bookmark createMany
+   * Bookmark createMany
    */
-  export type bookmarkCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many bookmarks.
+     * The data used to create many Bookmarks.
      */
-    data: bookmarkCreateManyInput | bookmarkCreateManyInput[]
+    data: BookmarkCreateManyInput | BookmarkCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * bookmark createManyAndReturn
+   * Bookmark createManyAndReturn
    */
-  export type bookmarkCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelectCreateManyAndReturn<ExtArgs> | null
+    select?: BookmarkSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * The data used to create many bookmarks.
+     * The data used to create many Bookmarks.
      */
-    data: bookmarkCreateManyInput | bookmarkCreateManyInput[]
+    data: BookmarkCreateManyInput | BookmarkCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * bookmark update
+   * Bookmark update
    */
-  export type bookmarkUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelect<ExtArgs> | null
+    select?: BookmarkSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * The data needed to update a bookmark.
+     * The data needed to update a Bookmark.
      */
-    data: XOR<bookmarkUpdateInput, bookmarkUncheckedUpdateInput>
+    data: XOR<BookmarkUpdateInput, BookmarkUncheckedUpdateInput>
     /**
-     * Choose, which bookmark to update.
+     * Choose, which Bookmark to update.
      */
-    where: bookmarkWhereUniqueInput
+    where: BookmarkWhereUniqueInput
   }
 
   /**
-   * bookmark updateMany
+   * Bookmark updateMany
    */
-  export type bookmarkUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update bookmarks.
+     * The data used to update Bookmarks.
      */
-    data: XOR<bookmarkUpdateManyMutationInput, bookmarkUncheckedUpdateManyInput>
+    data: XOR<BookmarkUpdateManyMutationInput, BookmarkUncheckedUpdateManyInput>
     /**
-     * Filter which bookmarks to update
+     * Filter which Bookmarks to update
      */
-    where?: bookmarkWhereInput
+    where?: BookmarkWhereInput
     /**
-     * Limit how many bookmarks to update.
+     * Limit how many Bookmarks to update.
      */
     limit?: number
   }
 
   /**
-   * bookmark updateManyAndReturn
+   * Bookmark updateManyAndReturn
    */
-  export type bookmarkUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: BookmarkSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * The data used to update bookmarks.
+     * The data used to update Bookmarks.
      */
-    data: XOR<bookmarkUpdateManyMutationInput, bookmarkUncheckedUpdateManyInput>
+    data: XOR<BookmarkUpdateManyMutationInput, BookmarkUncheckedUpdateManyInput>
     /**
-     * Filter which bookmarks to update
+     * Filter which Bookmarks to update
      */
-    where?: bookmarkWhereInput
+    where?: BookmarkWhereInput
     /**
-     * Limit how many bookmarks to update.
+     * Limit how many Bookmarks to update.
      */
     limit?: number
   }
 
   /**
-   * bookmark upsert
+   * Bookmark upsert
    */
-  export type bookmarkUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelect<ExtArgs> | null
+    select?: BookmarkSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * The filter to search for the bookmark to update in case it exists.
+     * The filter to search for the Bookmark to update in case it exists.
      */
-    where: bookmarkWhereUniqueInput
+    where: BookmarkWhereUniqueInput
     /**
-     * In case the bookmark found by the `where` argument doesn't exist, create a new bookmark with this data.
+     * In case the Bookmark found by the `where` argument doesn't exist, create a new Bookmark with this data.
      */
-    create: XOR<bookmarkCreateInput, bookmarkUncheckedCreateInput>
+    create: XOR<BookmarkCreateInput, BookmarkUncheckedCreateInput>
     /**
-     * In case the bookmark was found with the provided `where` argument, update it with this data.
+     * In case the Bookmark was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<bookmarkUpdateInput, bookmarkUncheckedUpdateInput>
+    update: XOR<BookmarkUpdateInput, BookmarkUncheckedUpdateInput>
   }
 
   /**
-   * bookmark delete
+   * Bookmark delete
    */
-  export type bookmarkDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelect<ExtArgs> | null
+    select?: BookmarkSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
     /**
-     * Filter which bookmark to delete.
+     * Filter which Bookmark to delete.
      */
-    where: bookmarkWhereUniqueInput
+    where: BookmarkWhereUniqueInput
   }
 
   /**
-   * bookmark deleteMany
+   * Bookmark deleteMany
    */
-  export type bookmarkDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which bookmarks to delete
+     * Filter which Bookmarks to delete
      */
-    where?: bookmarkWhereInput
+    where?: BookmarkWhereInput
     /**
-     * Limit how many bookmarks to delete.
+     * Limit how many Bookmarks to delete.
      */
     limit?: number
   }
 
   /**
-   * bookmark without action
+   * Bookmark without action
    */
-  export type bookmarkDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type BookmarkDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the bookmark
+     * Select specific fields to fetch from the Bookmark
      */
-    select?: bookmarkSelect<ExtArgs> | null
+    select?: BookmarkSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the bookmark
+     * Omit specific fields from the Bookmark
      */
-    omit?: bookmarkOmit<ExtArgs> | null
+    omit?: BookmarkOmit<ExtArgs> | null
   }
 
 
@@ -3184,20 +3184,20 @@ export namespace Prisma {
    */
 
 
-  export type userWhereInput = {
-    AND?: userWhereInput | userWhereInput[]
-    OR?: userWhereInput[]
-    NOT?: userWhereInput | userWhereInput[]
-    id?: IntFilter<"user"> | number
-    createdAt?: DateTimeFilter<"user"> | Date | string
-    updatedAt?: DateTimeFilter<"user"> | Date | string
-    email?: StringFilter<"user"> | string
-    hash?: StringFilter<"user"> | string
-    firstName?: StringNullableFilter<"user"> | string | null
-    lastName?: StringNullableFilter<"user"> | string | null
+  export type UserWhereInput = {
+    AND?: UserWhereInput | UserWhereInput[]
+    OR?: UserWhereInput[]
+    NOT?: UserWhereInput | UserWhereInput[]
+    id?: IntFilter<"User"> | number
+    createdAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
+    email?: StringFilter<"User"> | string
+    hash?: StringFilter<"User"> | string
+    firstName?: StringNullableFilter<"User"> | string | null
+    lastName?: StringNullableFilter<"User"> | string | null
   }
 
-  export type userOrderByWithRelationInput = {
+  export type UserOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -3207,20 +3207,20 @@ export namespace Prisma {
     lastName?: SortOrderInput | SortOrder
   }
 
-  export type userWhereUniqueInput = Prisma.AtLeast<{
+  export type UserWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: userWhereInput | userWhereInput[]
-    OR?: userWhereInput[]
-    NOT?: userWhereInput | userWhereInput[]
-    createdAt?: DateTimeFilter<"user"> | Date | string
-    updatedAt?: DateTimeFilter<"user"> | Date | string
-    email?: StringFilter<"user"> | string
-    hash?: StringFilter<"user"> | string
-    firstName?: StringNullableFilter<"user"> | string | null
-    lastName?: StringNullableFilter<"user"> | string | null
+    AND?: UserWhereInput | UserWhereInput[]
+    OR?: UserWhereInput[]
+    NOT?: UserWhereInput | UserWhereInput[]
+    createdAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
+    email?: StringFilter<"User"> | string
+    hash?: StringFilter<"User"> | string
+    firstName?: StringNullableFilter<"User"> | string | null
+    lastName?: StringNullableFilter<"User"> | string | null
   }, "id">
 
-  export type userOrderByWithAggregationInput = {
+  export type UserOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -3228,39 +3228,39 @@ export namespace Prisma {
     hash?: SortOrder
     firstName?: SortOrderInput | SortOrder
     lastName?: SortOrderInput | SortOrder
-    _count?: userCountOrderByAggregateInput
-    _avg?: userAvgOrderByAggregateInput
-    _max?: userMaxOrderByAggregateInput
-    _min?: userMinOrderByAggregateInput
-    _sum?: userSumOrderByAggregateInput
+    _count?: UserCountOrderByAggregateInput
+    _avg?: UserAvgOrderByAggregateInput
+    _max?: UserMaxOrderByAggregateInput
+    _min?: UserMinOrderByAggregateInput
+    _sum?: UserSumOrderByAggregateInput
   }
 
-  export type userScalarWhereWithAggregatesInput = {
-    AND?: userScalarWhereWithAggregatesInput | userScalarWhereWithAggregatesInput[]
-    OR?: userScalarWhereWithAggregatesInput[]
-    NOT?: userScalarWhereWithAggregatesInput | userScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"user"> | number
-    createdAt?: DateTimeWithAggregatesFilter<"user"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"user"> | Date | string
-    email?: StringWithAggregatesFilter<"user"> | string
-    hash?: StringWithAggregatesFilter<"user"> | string
-    firstName?: StringNullableWithAggregatesFilter<"user"> | string | null
-    lastName?: StringNullableWithAggregatesFilter<"user"> | string | null
+  export type UserScalarWhereWithAggregatesInput = {
+    AND?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
+    OR?: UserScalarWhereWithAggregatesInput[]
+    NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"User"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    email?: StringWithAggregatesFilter<"User"> | string
+    hash?: StringWithAggregatesFilter<"User"> | string
+    firstName?: StringNullableWithAggregatesFilter<"User"> | string | null
+    lastName?: StringNullableWithAggregatesFilter<"User"> | string | null
   }
 
-  export type bookmarkWhereInput = {
-    AND?: bookmarkWhereInput | bookmarkWhereInput[]
-    OR?: bookmarkWhereInput[]
-    NOT?: bookmarkWhereInput | bookmarkWhereInput[]
-    id?: IntFilter<"bookmark"> | number
-    createdAt?: DateTimeFilter<"bookmark"> | Date | string
-    updatedAt?: DateTimeFilter<"bookmark"> | Date | string
-    title?: StringFilter<"bookmark"> | string
-    description?: StringNullableFilter<"bookmark"> | string | null
-    link?: StringFilter<"bookmark"> | string
+  export type BookmarkWhereInput = {
+    AND?: BookmarkWhereInput | BookmarkWhereInput[]
+    OR?: BookmarkWhereInput[]
+    NOT?: BookmarkWhereInput | BookmarkWhereInput[]
+    id?: IntFilter<"Bookmark"> | number
+    createdAt?: DateTimeFilter<"Bookmark"> | Date | string
+    updatedAt?: DateTimeFilter<"Bookmark"> | Date | string
+    title?: StringFilter<"Bookmark"> | string
+    description?: StringNullableFilter<"Bookmark"> | string | null
+    link?: StringFilter<"Bookmark"> | string
   }
 
-  export type bookmarkOrderByWithRelationInput = {
+  export type BookmarkOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -3269,45 +3269,45 @@ export namespace Prisma {
     link?: SortOrder
   }
 
-  export type bookmarkWhereUniqueInput = Prisma.AtLeast<{
+  export type BookmarkWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: bookmarkWhereInput | bookmarkWhereInput[]
-    OR?: bookmarkWhereInput[]
-    NOT?: bookmarkWhereInput | bookmarkWhereInput[]
-    createdAt?: DateTimeFilter<"bookmark"> | Date | string
-    updatedAt?: DateTimeFilter<"bookmark"> | Date | string
-    title?: StringFilter<"bookmark"> | string
-    description?: StringNullableFilter<"bookmark"> | string | null
-    link?: StringFilter<"bookmark"> | string
+    AND?: BookmarkWhereInput | BookmarkWhereInput[]
+    OR?: BookmarkWhereInput[]
+    NOT?: BookmarkWhereInput | BookmarkWhereInput[]
+    createdAt?: DateTimeFilter<"Bookmark"> | Date | string
+    updatedAt?: DateTimeFilter<"Bookmark"> | Date | string
+    title?: StringFilter<"Bookmark"> | string
+    description?: StringNullableFilter<"Bookmark"> | string | null
+    link?: StringFilter<"Bookmark"> | string
   }, "id">
 
-  export type bookmarkOrderByWithAggregationInput = {
+  export type BookmarkOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     title?: SortOrder
     description?: SortOrderInput | SortOrder
     link?: SortOrder
-    _count?: bookmarkCountOrderByAggregateInput
-    _avg?: bookmarkAvgOrderByAggregateInput
-    _max?: bookmarkMaxOrderByAggregateInput
-    _min?: bookmarkMinOrderByAggregateInput
-    _sum?: bookmarkSumOrderByAggregateInput
+    _count?: BookmarkCountOrderByAggregateInput
+    _avg?: BookmarkAvgOrderByAggregateInput
+    _max?: BookmarkMaxOrderByAggregateInput
+    _min?: BookmarkMinOrderByAggregateInput
+    _sum?: BookmarkSumOrderByAggregateInput
   }
 
-  export type bookmarkScalarWhereWithAggregatesInput = {
-    AND?: bookmarkScalarWhereWithAggregatesInput | bookmarkScalarWhereWithAggregatesInput[]
-    OR?: bookmarkScalarWhereWithAggregatesInput[]
-    NOT?: bookmarkScalarWhereWithAggregatesInput | bookmarkScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"bookmark"> | number
-    createdAt?: DateTimeWithAggregatesFilter<"bookmark"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"bookmark"> | Date | string
-    title?: StringWithAggregatesFilter<"bookmark"> | string
-    description?: StringNullableWithAggregatesFilter<"bookmark"> | string | null
-    link?: StringWithAggregatesFilter<"bookmark"> | string
+  export type BookmarkScalarWhereWithAggregatesInput = {
+    AND?: BookmarkScalarWhereWithAggregatesInput | BookmarkScalarWhereWithAggregatesInput[]
+    OR?: BookmarkScalarWhereWithAggregatesInput[]
+    NOT?: BookmarkScalarWhereWithAggregatesInput | BookmarkScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Bookmark"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"Bookmark"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"Bookmark"> | Date | string
+    title?: StringWithAggregatesFilter<"Bookmark"> | string
+    description?: StringNullableWithAggregatesFilter<"Bookmark"> | string | null
+    link?: StringWithAggregatesFilter<"Bookmark"> | string
   }
 
-  export type userCreateInput = {
+  export type UserCreateInput = {
     createdAt?: Date | string
     updatedAt?: Date | string
     email: string
@@ -3316,36 +3316,7 @@ export namespace Prisma {
     lastName?: string | null
   }
 
-  export type userUncheckedCreateInput = {
-    id?: number
-    createdAt?: Date | string
-    updatedAt?: Date | string
-    email: string
-    hash: string
-    firstName?: string | null
-    lastName?: string | null
-  }
-
-  export type userUpdateInput = {
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    email?: StringFieldUpdateOperationsInput | string
-    hash?: StringFieldUpdateOperationsInput | string
-    firstName?: NullableStringFieldUpdateOperationsInput | string | null
-    lastName?: NullableStringFieldUpdateOperationsInput | string | null
-  }
-
-  export type userUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    email?: StringFieldUpdateOperationsInput | string
-    hash?: StringFieldUpdateOperationsInput | string
-    firstName?: NullableStringFieldUpdateOperationsInput | string | null
-    lastName?: NullableStringFieldUpdateOperationsInput | string | null
-  }
-
-  export type userCreateManyInput = {
+  export type UserUncheckedCreateInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -3355,7 +3326,7 @@ export namespace Prisma {
     lastName?: string | null
   }
 
-  export type userUpdateManyMutationInput = {
+  export type UserUpdateInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
@@ -3364,7 +3335,7 @@ export namespace Prisma {
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type userUncheckedUpdateManyInput = {
+  export type UserUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3374,7 +3345,36 @@ export namespace Prisma {
     lastName?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type bookmarkCreateInput = {
+  export type UserCreateManyInput = {
+    id?: number
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    email: string
+    hash: string
+    firstName?: string | null
+    lastName?: string | null
+  }
+
+  export type UserUpdateManyMutationInput = {
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    email?: StringFieldUpdateOperationsInput | string
+    hash?: StringFieldUpdateOperationsInput | string
+    firstName?: NullableStringFieldUpdateOperationsInput | string | null
+    lastName?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type UserUncheckedUpdateManyInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    email?: StringFieldUpdateOperationsInput | string
+    hash?: StringFieldUpdateOperationsInput | string
+    firstName?: NullableStringFieldUpdateOperationsInput | string | null
+    lastName?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type BookmarkCreateInput = {
     createdAt?: Date | string
     updatedAt?: Date | string
     title: string
@@ -3382,7 +3382,7 @@ export namespace Prisma {
     link: string
   }
 
-  export type bookmarkUncheckedCreateInput = {
+  export type BookmarkUncheckedCreateInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -3391,7 +3391,7 @@ export namespace Prisma {
     link: string
   }
 
-  export type bookmarkUpdateInput = {
+  export type BookmarkUpdateInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     title?: StringFieldUpdateOperationsInput | string
@@ -3399,7 +3399,7 @@ export namespace Prisma {
     link?: StringFieldUpdateOperationsInput | string
   }
 
-  export type bookmarkUncheckedUpdateInput = {
+  export type BookmarkUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3408,7 +3408,7 @@ export namespace Prisma {
     link?: StringFieldUpdateOperationsInput | string
   }
 
-  export type bookmarkCreateManyInput = {
+  export type BookmarkCreateManyInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -3417,7 +3417,7 @@ export namespace Prisma {
     link: string
   }
 
-  export type bookmarkUpdateManyMutationInput = {
+  export type BookmarkUpdateManyMutationInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     title?: StringFieldUpdateOperationsInput | string
@@ -3425,7 +3425,7 @@ export namespace Prisma {
     link?: StringFieldUpdateOperationsInput | string
   }
 
-  export type bookmarkUncheckedUpdateManyInput = {
+  export type BookmarkUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3491,7 +3491,7 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type userCountOrderByAggregateInput = {
+  export type UserCountOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -3501,21 +3501,11 @@ export namespace Prisma {
     lastName?: SortOrder
   }
 
-  export type userAvgOrderByAggregateInput = {
+  export type UserAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type userMaxOrderByAggregateInput = {
-    id?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-    email?: SortOrder
-    hash?: SortOrder
-    firstName?: SortOrder
-    lastName?: SortOrder
-  }
-
-  export type userMinOrderByAggregateInput = {
+  export type UserMaxOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -3525,7 +3515,17 @@ export namespace Prisma {
     lastName?: SortOrder
   }
 
-  export type userSumOrderByAggregateInput = {
+  export type UserMinOrderByAggregateInput = {
+    id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    email?: SortOrder
+    hash?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
+  }
+
+  export type UserSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -3595,7 +3595,7 @@ export namespace Prisma {
     _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
-  export type bookmarkCountOrderByAggregateInput = {
+  export type BookmarkCountOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -3604,20 +3604,11 @@ export namespace Prisma {
     link?: SortOrder
   }
 
-  export type bookmarkAvgOrderByAggregateInput = {
+  export type BookmarkAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type bookmarkMaxOrderByAggregateInput = {
-    id?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-    title?: SortOrder
-    description?: SortOrder
-    link?: SortOrder
-  }
-
-  export type bookmarkMinOrderByAggregateInput = {
+  export type BookmarkMaxOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -3626,7 +3617,16 @@ export namespace Prisma {
     link?: SortOrder
   }
 
-  export type bookmarkSumOrderByAggregateInput = {
+  export type BookmarkMinOrderByAggregateInput = {
+    id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    link?: SortOrder
+  }
+
+  export type BookmarkSumOrderByAggregateInput = {
     id?: SortOrder
   }
 

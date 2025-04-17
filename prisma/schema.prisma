@@ -14,7 +14,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model user{
+model User{
   id Int @id @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -23,15 +23,15 @@ model user{
   hash String
 
   firstName String?
-  lastName String? 
+  lastName String?
 }
 
-model bookmark{
+model Bookmark{
   id Int @id @default(autoincrement())
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt 
+  updatedAt DateTime @updatedAt
 
   title String
   description String?
-  link String
+  link String 
 }

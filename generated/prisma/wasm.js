@@ -153,8 +153,8 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  user: 'user',
-  bookmark: 'bookmark'
+  User: 'User',
+  Bookmark: 'Bookmark'
 };
 
 /**
