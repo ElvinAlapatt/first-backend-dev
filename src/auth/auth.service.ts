@@ -11,7 +11,7 @@ export class AuthService {
 login() {
     return {
         ms : "Hello msg",
-        age : 18
+        age : 18 //this is the object which is going to displat if you followed the route localhost:3333/auth/login
     };
 }
 }
